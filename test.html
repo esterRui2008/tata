@@ -1,0 +1,70 @@
+<html><head lang="en">
+  <meta charset="UTF-8">
+  <title>AJAX上传</title>
+  <script src="js/jquery.min.js"></script>
+  
+  <style>
+    form {display: block; margin: 20px auto; background: #eee; border-radius: 10px; padding: 15px }
+    #progress {position: relative; width: 400px; border: 1px solid #ddd; padding: 1px; border-radius: 3px;}
+    #bar {background-color: #B4F5B4; width: 0%; height: 20px; border-radius: 3px;}
+    #percent {position: absolute; display: inline-block; top: 3px; left: 48%;}
+  </style>
+</head>
+<body>
+<h1>HIALL AJAX SUBMIT上传文件测试</h1>
+<form id="myForm" action="http://hiall.liasica.com/wechat/travel/upload" method="POST" enctype="multipart/form-data" target="jqFormIO0" encattr="multipart/form-data">
+  <input type="file" size="60" name="UploadForm[file]">
+  <input type="text" size="10" name="field" value="images">
+  <input type="submit" value="点击上传">
+</form>
+<div id="progress">
+  <div id="bar" style="width: 0%;"></div>
+  <div id="percent">0%</div>
+</div>
+<br>
+<div id="message"><font color="green"></font></div>
+<script>
+  /*$(document).ready(function () {
+    var options = {
+      beforeSend: function () {
+        $("#progress").show();
+        $("#bar").width('0%');
+        $("#message").html("");
+        $("#percent").html("0%");
+      },
+      uploadProgress: function (event, position, total, percentComplete) {
+        $("#bar").width(percentComplete + '%');
+        $("#percent").html(percentComplete + '%');
+      },
+      success: function () {
+        $("#bar").width('100%');
+        $("#percent").html('100%');
+      },
+      complete: function (response) {
+        console.log(response);
+        $("#message").html("<font color='green'>" + response.responseText + "</font>");
+      },
+      error: function () {
+        $("#message").html("<font color='red'> ERROR: unable to upload files</font>");
+      }
+    };
+    $("#myForm").ajaxForm(options);
+    alert(b);
+    b = 1;
+  });*/
+var d = new Date();
+console.log(d.getTimezoneOffset())
+</script>
+alue：表示该属性的值，默认为undefined。
+
+writable：表示该属性的值（value）是否可以改变，默认为true。
+
+enumerable： 表示该属性是否可枚举，默认为true，也就是该属性会出现在for...in和Object.keys()等操作中。
+
+configurable：表示“可配置性”，默认为true。如果设为false，表示无法删除该属性，也不得改变attributes对象（value属性除外），也就是configurable属性控制了attributes对象的可写性。
+
+get：表示该属性的取值函数（getter），默认为undefined。
+
+set：表示该属性的存值函数（setter），默认为undefined。
+
+</body></html>
